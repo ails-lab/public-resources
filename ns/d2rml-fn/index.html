@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset='utf-8'>
+    <script src='https://www.w3.org/Tools/respec/respec-w3c' async class='remove'></script>
+    <style id="respec-mainstyle">
+	</style>
+    <script class='remove'>
+        // All config options at https://respec.org/docs/
+        var respecConfig = {
+            // Working Groups ids at https://respec.org/w3c/groups/
+            group: "webapps",
+            specStatus: "unofficial",
+            editors: [{
+                name: "Alexandros Chortaras",
+                url: "https://www.ece.ntua.gr/en/staff/217",
+            }],
+            shortName: "d2rml-fn",
+            // See https://respec.org/docs/#xref for usage.
+            xref: "web-platform",
+        };
+    </script>
+	<style>
+	
+	</style>
+</head>
+
+<body>
+    <h1 id="title">The D2RML-FN Vocabulary</h1>
+    <section id='abstract'>
+		<p>This document defines the <a href="https://apps.islab.ntua.gr/d2rml/d2rmlis">Data to RDF Mapping Language Functions (D2RML-FN)</a> vocabulary.</p>
+    </section>
+
+    <section id='namespace'>
+	<h2>Namespace</h2>
+		<p>The namespace is <code>http://islab.ntua.gr/ns/d2rml-fn</code>.</p>
+    </section>
+	
+
+	<section id="sec-classes">
+		<h2>Classes</h2>
+		<p>This section defines the classes of this vocabulary.</p>
+
+		<section id="drfn:Function">
+			<h3>drfn:Function</h3>
+
+			<p>A function.</p>
+			
+			<dl>
+				<dt>URI:</dt>
+				<dd><code>http://islab.ntua.gr/ns/d2rml-fn#Function</code></dd>
+			</dl>
+			
+		</section>
+		
+		<section id="drfn:FunctionDescription">
+			<h3>drfn:FunctionDescription</h3>
+
+			<p>A description of a function.</p>
+			
+			<dl>
+				<dt>URI:</dt>
+				<dd><code>http://islab.ntua.gr/ns/d2rml-fn#FunctionDescription</code></dd>
+			</dl>
+			
+		</section>
+		
+		<section id="drfn:Parameter">
+			<h3>drfn:Parameter</h3>
+
+			<p>A parameter description for an entity that takes taking parametric inputs.</p>
+			
+			<dl>
+				<dt>URI:</dt>
+				<dd><code>http://islab.ntua.gr/ns/d2rml-fn#Parameter</code></dd>
+			</dl>
+			
+		</section>
+		
+		<section id="drfn:Result">
+			<h3>drfn:Result</h3>
+
+			<p>A result description for an entity that generated an output.</p>
+			
+			<dl>
+				<dt>URI:</dt>
+				<dd><code>http://islab.ntua.gr/ns/d2rml-fn#Result</code></dd>
+			</dl>
+			
+		</section>		
+
+	</section>
+	
+	<section id="properties">
+		<h2>Properties</h2>
+
+		<p>This section defines the properties of this vocabulary.</p>
+
+		<section id="drfn:containedType">
+			<h3>drfn:containedType</h3>
+			<p>The type of the elements of a container a parameter or result.</p>
+			
+			<dl>
+				<dt>URI:</dt>
+				<dd><code>http://islab.ntua.gr/ns/d2rml-fn#containedType</code></dd>
+				<dt>Domain:</dt>
+				<dd><a href="http://islab.ntua.gr/ns/d2rml-fn#Parameter"><code>drfn:Parameter</code></a>, <a href="http://islab.ntua.gr/ns/d2rml-fn#Result"><code>drfn:Result</code></a></dd>
+				<dt>Range:</dt>
+				<dd>An IRI specifying a datatype in the <a href="https://www.w3.org/TR/xmlschema11-2/"><code>xsd</code></a> namespace.</dd>
+			</dl>
+		</section>
+		
+		<section id="drfn:defaultValue">
+			<h3>drfn:defaultValue</h3>
+			<p>The default value of a parameter.</p>
+			
+			<dl>
+				<dt>URI:</dt>
+				<dd><code>http://islab.ntua.gr/ns/d2rml-fn#defaultValue</code></dd>
+				<dt>Domain:</dt>
+				<dd><a href="http://islab.ntua.gr/ns/d2rml-fn#Parameter"><code>drfn:Parameter</code></a></dd>
+				<dt>Range:</dt>
+				<dd>A literal.</dd>
+			</dl>
+		</section>	
+		
+		<section id="drfn:describes">
+			<h3>drfn:describes</h3>
+			<p>The function that a function description describes.</p>
+			
+			<dl>
+				<dt>URI:</dt>
+				<dd><code>http://islab.ntua.gr/ns/d2rml-fn#describes</code></dd>
+				<dt>Domain:</dt>
+				<dd><a href="http://islab.ntua.gr/ns/d2rml-fn#FunctionDescription"><code>drfn:FunctionDescription</code></a></dd>
+				<dt>Range includes:</dt>
+				<dd><a href="http://islab.ntua.gr/ns/d2rml-fn#Function"><code>drfn:Function</code></a></dd>
+			</dl>
+		</section>		
+		
+		<section id="drfn:name">
+			<h3>drfn:name</h3>
+			<p>The name of a parameter or result.</p>
+			
+			<dl>
+				<dt>URI:</dt>
+				<dd><code>http://islab.ntua.gr/ns/d2rml-fn#name</code></dd>
+				<dt>Domain:</dt>
+				<dd><a href="http://islab.ntua.gr/ns/d2rml-fn#Parameter"><code>drfn:Parameter</code></a>, <a href="http://islab.ntua.gr/ns/d2rml-fn#Result"><code>drfn:Result</code></a></dd>
+				<dt>Range:</dt>
+				<dd>An <a href="https://www.w3.org/TR/xmlschema11-2/#integer"><code>xsd:string</code></a> literal.</dd>
+			</dl>
+		</section>
+		
+		<section id="drfn:parameter">
+			<h3>drfn:parameter</h3>
+			<p>A parameter of a function.</p>
+			
+			<dl>
+				<dt>URI:</dt>
+				<dd><code>http://islab.ntua.gr/ns/d2rml-fn#parameter</code></dd>
+				<dt>Domain:</dt>
+				<dd><a href="http://islab.ntua.gr/ns/d2rml-fn#FunctionDescription"><code>drfn:FunctionDescription</code></a></dd>
+				<dt>Range:</dt>
+				<dd><a href="http://islab.ntua.gr/ns/d2rml-fn#Parameter"><code>drfn:Parameter</code></a></dd>
+			</dl>
+		</section>		
+		
+		<section id="drfn:parameters">
+			<h3>drfn:parameters</h3>
+			<p>A list of parameters. The order of a parameter in the list determines its position.</p>
+			
+			<dl>
+				<dt>URI:</dt>
+				<dd><code>http://islab.ntua.gr/ns/d2rml-fn#parameters</code></dd>
+				<dt>Domain:</dt>
+				<dd><a href="http://islab.ntua.gr/ns/d2rml-fn#FunctionDescription"><code>drfn:FunctionDescription</code></a></dd>
+				<dt>Range:</dt>
+				<dd>An <a href="https://www.w3.org/TR/rdf-schema/#ch_list"><code>rdf:List</code></a> of <a href="http://islab.ntua.gr/ns/d2rml-fn#Parameter"><code>drfn:Parameter</code></a>s</dd>
+			</dl>
+		</section>				
+		
+		<section id="drfn:position">
+			<h3>drfn:position</h3>
+			<p>The position of a parameter.</p>
+			
+			<dl>
+				<dt>URI:</dt>
+				<dd><code>http://islab.ntua.gr/ns/d2rml-fn#name</code></dd>
+				<dt>Domain:</dt>
+				<dd><a href="http://islab.ntua.gr/ns/d2rml-fn#Parameter"><code>drfn:Parameter</code></a></dd>
+				<dt>Range:</dt>
+				<dd>An <a href="https://www.w3.org/TR/xmlschema11-2/#integer"><code>xsd:integer</code></a> literal.</dd>
+			</dl>
+		</section>		
+		
+		<section id="drfn:required">
+			<h3>drfn:required</h3>
+			<p>Used to specify if a parameter is required or optional.</p>
+			
+			<dl>
+				<dt>URI:</dt>
+				<dd><code>http://islab.ntua.gr/ns/d2rml-fn#required</code></dd>
+				<dt>Domain:</dt>
+				<dd><a href="http://islab.ntua.gr/ns/d2rml-fn#Parameter"><code>drfn:Parameter</code></a></dd>
+				<dt>Range:</dt>
+				<dd>An <a href="https://www.w3.org/TR/xmlschema11-2/#boolean"><code>xsd:boolean</code></a> literal.</dd>
+			</dl>
+		</section>			
+		
+		<section id="drfn:result">
+			<h3>drfn:result</h3>
+			<p>A results of a function.</p>
+			
+			<dl>
+				<dt>URI:</dt>
+				<dd><code>http://islab.ntua.gr/ns/d2rml-fn#parameter</code></dd>
+				<dt>Domain:</dt>
+				<dd><a href="http://islab.ntua.gr/ns/d2rml-fn#FunctionDescription"><code>drfn:FunctionDescription</code></a></dd>
+				<dt>Range:</dt>
+				<dd><a href="http://islab.ntua.gr/ns/d2rml-fn#Parameter"><code>drfn:Parameter</code></a></dd>
+			</dl>
+		</section>		
+		
+		<section id="drfn:results">
+			<h3>drfn:results</h3>
+			<p>A list of results. The order of a parameter in the list determines its position.</p>
+			
+			<dl>
+				<dt>URI:</dt>
+				<dd><code>http://islab.ntua.gr/ns/d2rml-fn#parameters</code></dd>
+				<dt>Domain:</dt>
+				<dd><a href="http://islab.ntua.gr/ns/d2rml-fn#FunctionDescription"><code>drfn:FunctionDescription</code></a></dd>
+				<dt>Range:</dt>
+				<dd>An <a href="https://www.w3.org/TR/rdf-schema/#ch_list"><code>rdf:List</code></a> of <a href="http://islab.ntua.gr/ns/d2rml-fn#Parameter"><code>drfn:Parameter</code></a>s</dd>
+			</dl>
+		</section>
+		
+		<section id="drfn:type">
+			<h3>drfn:type</h3>
+			<p>The type of a parameter or result.</p>
+			
+			<dl>
+				<dt>URI:</dt>
+				<dd><code>http://islab.ntua.gr/ns/d2rml-fn#type</code></dd>
+				<dt>Domain:</dt>
+				<dd><a href="http://islab.ntua.gr/ns/d2rml-fn#Parameter"><code>drfn:Parameter</code></a>, <a href="http://islab.ntua.gr/ns/d2rml-fn#Result"><code>drfn:Result</code></a></dd>
+				<dt>Range:</dt>
+				<dd>An IRI specifying a datatype in the <a href="https://www.w3.org/TR/xmlschema11-2/"><code>xsd</code></a> namespace or <a href="https://www.w3.org/TR/rdf-schema/#ch_list"><code>rdf:List</code></a>.</dd>
+			</dl>
+		</section>
+		
+	</section>
+</section>
+
+
+</body>
+
+</html>
