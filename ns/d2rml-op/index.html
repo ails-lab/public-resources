@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset='utf-8'>
+	<title> D2RML Operators & Functions</title>
+    <script src='https://www.w3.org/Tools/respec/respec-w3c' async class='remove'></script>
+    <style id="respec-mainstyle">
+	</style>
+    <script class='remove'>
+        // All config options at https://respec.org/docs/
+        var respecConfig = {
+            // Working Groups ids at https://respec.org/w3c/groups/
+            specStatus: "unofficial",
+            editors: [{
+                name: "Alexandros Chortaras",
+                url: "https://www.ece.ntua.gr/en/staff/217",
+            }],
+            shortName: "d2rml-fn",
+            // See https://respec.org/docs/#xref for usage.
+            xref: "web-platform",
+			latestVersion: "https://apps.islab.ntua.gr/dr2rml/tr/d2rml-op",
+	};
+    </script>
+	<style>
+	
+	</style>
+</head>
+
+<body>
+    <h1 id="title">The D2RML Operators & Functions (D2RML&#8209;OP) Vocabulary</h1>
+    <section id='abstract'>
+		<p>This document defines the D2RML Operators & Functions (D2RML&#8209;OP) vocabulary.</p>
+    </section>
+
+    <section id='namespace'>
+	<h2>Namespace</h2>
+		<p>The namespace <code>drop</code> is <code>http://islab.ntua.gr/ns/d2rml-op#</code>.</p>
+    </section>
+	
+
+	<section id="sec-classes">
+		<h2>Classes</h2>
+		<p>This section defines the classes of this vocabulary.</p>
+
+		<section id="drop:Function">
+			<h3>drop:Function</h3>
+
+			<p>A function.</p>
+			
+			<dl>
+				<dt>URI:</dt>
+				<dd><code>http://islab.ntua.gr/ns/d2rml-op#Function</code></dd>
+			</dl>
+			
+		</section>
+		
+		<section id="drop:FunctionDescription">
+			<h3>drop:FunctionDescription</h3>
+
+			<p>A description of a function.</p>
+			
+			<dl>
+				<dt>URI:</dt>
+				<dd><code>http://islab.ntua.gr/ns/d2rml-op#FunctionDescription</code></dd>
+			</dl>
+			
+		</section>
+		
+		<section id="drop:Operator">
+			<h3>drop:Operator</h3>
+
+			<p>An operator.</p>
+			
+			<dl>
+				<dt>URI:</dt>
+				<dd><code>http://islab.ntua.gr/ns/d2rml-op#Operator</code></dd>
+			</dl>
+			
+		</section>
+		
+		<section id="drop:Parameter">
+			<h3>drop:Parameter</h3>
+
+			<p>A parameter description for an entity that takes taking parametric inputs.</p>
+			
+			<dl>
+				<dt>URI:</dt>
+				<dd><code>http://islab.ntua.gr/ns/d2rml-op#Parameter</code></dd>
+			</dl>
+			
+		</section>
+		
+		<section id="drop:Result">
+			<h3>drop:Result</h3>
+
+			<p>A result description for an entity that generated an output.</p>
+			
+			<dl>
+				<dt>URI:</dt>
+				<dd><code>http://islab.ntua.gr/ns/d2rml-op#Result</code></dd>
+			</dl>
+			
+		</section>		
+
+	</section>
+	
+	<section id="properties">
+		<h2>Properties</h2>
+
+		<p>This section defines the properties of this vocabulary.</p>
+
+		<section id="drop:containedDatatype">
+			<h3>drop:containedDatatype</h3>
+			<p>The datatype of the elements of a container a parameter or result.</p>
+			
+			<dl>
+				<dt>URI:</dt>
+				<dd><code>http://islab.ntua.gr/ns/d2rml-op#containedDatatype</code></dd>
+				<dt>Domain:</dt>
+				<dd><a href="http://islab.ntua.gr/ns/d2rml-op#Parameter"><code>drop:Parameter</code></a>, <a href="http://islab.ntua.gr/ns/d2rml-op#Result"><code>drop:Result</code></a></dd>
+				<dt>Range:</dt>
+				<dd>An IRI specifying a datatype in the <a href="https://www.w3.org/TR/xmlschema11-2/"><code>xsd</code></a> namespace.</dd>
+			</dl>
+		</section>
+		
+		<section id="drop:defaultValue">
+			<h3>drop:defaultValue</h3>
+			<p>The default value of a parameter.</p>
+			
+			<dl>
+				<dt>URI:</dt>
+				<dd><code>http://islab.ntua.gr/ns/d2rml-op#defaultValue</code></dd>
+				<dt>Domain:</dt>
+				<dd><a href="http://islab.ntua.gr/ns/d2rml-op#Parameter"><code>drop:Parameter</code></a></dd>
+				<dt>Range:</dt>
+				<dd>A literal.</dd>
+			</dl>
+		</section>	
+		
+		<section id="drop:datatype">
+			<h3>drop:datatype</h3>
+			<p>The datatype of a parameter or result.</p>
+			
+			<dl>
+				<dt>URI:</dt>
+				<dd><code>http://islab.ntua.gr/ns/d2rml-op#datatype</code></dd>
+				<dt>Domain:</dt>
+				<dd><a href="http://islab.ntua.gr/ns/d2rml-op#Parameter"><code>drop:Parameter</code></a>, <a href="http://islab.ntua.gr/ns/d2rml-op#Result"><code>drop:Result</code></a></dd>
+				<dt>Range:</dt>
+				<dd>An IRI specifying a datatype in the <a href="https://www.w3.org/TR/xmlschema11-2/"><code>xsd</code></a> namespace or <a href="https://www.w3.org/TR/rdf-schema/#ch_list"><code>rdf:List</code></a>.</dd>
+			</dl>
+		</section>
+		
+		<section id="drop:describes">
+			<h3>drop:describes</h3>
+			<p>The function that a function description describes.</p>
+			
+			<dl>
+				<dt>URI:</dt>
+				<dd><code>http://islab.ntua.gr/ns/d2rml-op#describes</code></dd>
+				<dt>Domain:</dt>
+				<dd><a href="http://islab.ntua.gr/ns/d2rml-op#FunctionDescription"><code>drop:FunctionDescription</code></a></dd>
+				<dt>Range includes:</dt>
+				<dd><a href="http://islab.ntua.gr/ns/d2rml-op#Function"><code>drop:Function</code></a></dd>
+			</dl>
+		</section>		
+		
+		<section id="drop:name">
+			<h3>drop:name</h3>
+			<p>The name of a parameter or result.</p>
+			
+			<dl>
+				<dt>URI:</dt>
+				<dd><code>http://islab.ntua.gr/ns/d2rml-op#name</code></dd>
+				<dt>Domain:</dt>
+				<dd><a href="http://islab.ntua.gr/ns/d2rml-op#Parameter"><code>drop:Parameter</code></a>, <a href="http://islab.ntua.gr/ns/d2rml-op#Result"><code>drop:Result</code></a></dd>
+				<dt>Range:</dt>
+				<dd>An <a href="https://www.w3.org/TR/xmlschema11-2/#integer"><code>xsd:string</code></a> literal.</dd>
+			</dl>
+		</section>
+		
+		<section id="drop:parameter">
+			<h3>drop:parameter</h3>
+			<p>A parameter of a function.</p>
+			
+			<dl>
+				<dt>URI:</dt>
+				<dd><code>http://islab.ntua.gr/ns/d2rml-op#parameter</code></dd>
+				<dt>Domain:</dt>
+				<dd><a href="http://islab.ntua.gr/ns/d2rml-op#FunctionDescription"><code>drop:FunctionDescription</code></a></dd>
+				<dt>Range:</dt>
+				<dd><a href="http://islab.ntua.gr/ns/d2rml-op#Parameter"><code>drop:Parameter</code></a></dd>
+			</dl>
+		</section>		
+		
+		<section id="drop:parameters">
+			<h3>drop:parameters</h3>
+			<p>A list of parameters. The order of a parameter in the list determines its position.</p>
+			
+			<dl>
+				<dt>URI:</dt>
+				<dd><code>http://islab.ntua.gr/ns/d2rml-op#parameters</code></dd>
+				<dt>Domain:</dt>
+				<dd><a href="http://islab.ntua.gr/ns/d2rml-op#FunctionDescription"><code>drop:FunctionDescription</code></a></dd>
+				<dt>Range:</dt>
+				<dd>An <a href="https://www.w3.org/TR/rdf-schema/#ch_list"><code>rdf:List</code></a> of <a href="http://islab.ntua.gr/ns/d2rml-op#Parameter"><code>drop:Parameter</code></a>s</dd>
+			</dl>
+		</section>				
+		
+		<section id="drop:position">
+			<h3>drop:position</h3>
+			<p>The position of a parameter.</p>
+			
+			<dl>
+				<dt>URI:</dt>
+				<dd><code>http://islab.ntua.gr/ns/d2rml-op#name</code></dd>
+				<dt>Domain:</dt>
+				<dd><a href="http://islab.ntua.gr/ns/d2rml-op#Parameter"><code>drop:Parameter</code></a></dd>
+				<dt>Range:</dt>
+				<dd>An <a href="https://www.w3.org/TR/xmlschema11-2/#integer"><code>xsd:integer</code></a> literal.</dd>
+			</dl>
+		</section>		
+		
+		<section id="drop:required">
+			<h3>drop:required</h3>
+			<p>Used to specify if a parameter is required or optional.</p>
+			
+			<dl>
+				<dt>URI:</dt>
+				<dd><code>http://islab.ntua.gr/ns/d2rml-op#required</code></dd>
+				<dt>Domain:</dt>
+				<dd><a href="http://islab.ntua.gr/ns/d2rml-op#Parameter"><code>drop:Parameter</code></a></dd>
+				<dt>Range:</dt>
+				<dd>An <a href="https://www.w3.org/TR/xmlschema11-2/#boolean"><code>xsd:boolean</code></a> literal.</dd>
+			</dl>
+		</section>			
+		
+		<section id="drop:result">
+			<h3>drop:result</h3>
+			<p>A results of a function.</p>
+			
+			<dl>
+				<dt>URI:</dt>
+				<dd><code>http://islab.ntua.gr/ns/d2rml-op#result</code></dd>
+				<dt>Domain:</dt>
+				<dd><a href="http://islab.ntua.gr/ns/d2rml-op#FunctionDescription"><code>drop:FunctionDescription</code></a></dd>
+				<dt>Range:</dt>
+				<dd><a href="http://islab.ntua.gr/ns/d2rml-op#Result"><code>drop:Result</code></a></dd>
+			</dl>
+		</section>		
+		
+		<section id="drop:results">
+			<h3>drop:results</h3>
+			<p>A list of results. The order of a parameter in the list determines its position.</p>
+			
+			<dl>
+				<dt>URI:</dt>
+				<dd><code>http://islab.ntua.gr/ns/d2rml-op#results</code></dd>
+				<dt>Domain:</dt>
+				<dd><a href="http://islab.ntua.gr/ns/d2rml-op#FunctionDescription"><code>drop:FunctionDescription</code></a></dd>
+				<dt>Range:</dt>
+				<dd>An <a href="https://www.w3.org/TR/rdf-schema/#ch_list"><code>rdf:List</code></a> of <a href="http://islab.ntua.gr/ns/d2rml-op#Result"><code>drop:Result</code></a>s</dd>
+			</dl>
+		</section>
+		
+	</section>
+	
+	<section id="individuals">
+		<h2>Individuals</h2>
+		
+		<section id="operators">
+			<h3>Operators</h3>
+			
+			<p>D2RML-OP defines the operators listed in the following table. All operators are instances of <a href="http://islab.ntua.gr/ns/d2rml-op#Operarator"><code>drop:Operator</code></a>.</p>
+			
+			<table class="def" id="tab-operators" rules="all">
+				<caption>Operators.</caption>
+				<thead>
+					<tr>
+						<th><strong>URI</strong></th>
+						<th><strong>Description</strong></th>
+					</tr>
+				</thead>				
+				<tbody>
+					<tr>
+						<td><div id="drop:AND"><a href="http://islab.ntua.gr/ns/d2rml-op#logicalAnd"><code>drop:logicalAnd</code></a></div></td>
+						<td>The AND boolean operator</td>
+					</tr>
+					<tr>
+						<td><div id="drop:NOT"><a href="http://islab.ntua.gr/ns/d2rml-op#logicalNot"><code>drop:logicalNot</code></a></div></td>
+						<td>The NOT boolean operator</td>
+					</tr>
+					<tr>
+						<td><div id="drop:OR"><a href="http://islab.ntua.gr/ns/d2rml-op#logicalOr"><code>drop:logicalOr</code></a></div></td>
+						<td>The OR boolean operator</td>
+					</tr>
+				</tbody>
+			</table>
+		</section>	
+	</section>
+
+</body>
+
+</html>
