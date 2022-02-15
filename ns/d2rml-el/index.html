@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset='utf-8'>
+	<title> D2RML Expression Languages</title>
+    <script src='https://www.w3.org/Tools/respec/respec-w3c' class='remove' defer></script>
+    <style id="respec-mainstyle"></style>
+    <script class='remove'>
+        // All config options at https://respec.org/docs/
+        var respecConfig = {
+            // Working Groups ids at https://respec.org/w3c/groups/
+            specStatus: "unofficial",
+            editors: [{
+                name: "Alexandros Chortaras",
+                url: "https://www.ece.ntua.gr/en/staff/217",
+            }],
+            shortName: "d2rml",
+            // See https://respec.org/docs/#xref for usage.
+            xref: "web-platform",
+			latestVersion: "https://apps.islab.ntua.gr/dr2rml/tr/d2rml-el",
+        };
+    </script>
+
+</head>
+
+<body>
+    <h1 id="title">The D2RML Expression Languages (D2RML&#8209;EL) Vocabulary</h1>
+    <section id='abstract'>
+		<p>This document defines the D2RML Expression Languages (D2RML&#8209;EL) vocabulary.</p>
+    </section>
+
+    <section id='namespace'>
+		<h2>Namespace</h2>
+		<p>The namespace <code>drel</code> is <code>http://islab.ntua.gr/ns/d2rml-el#</code>.</p>
+    </section>
+
+	<section id="classes">
+		<h2>Classes</h2>
+		
+		<section id="drel:ExpressionLanguage">
+			<h3>drel:ExpressionLanguage</h3>
+
+			<p>An expression language.</p>
+			
+			<dl>
+				<dt>URI:</dt>
+				<dd><code>http://islab.ntua.gr/ns/dr2ml-el#ExpressionLanguage</code></dd>
+			</dl>
+			
+		</section>		
+		
+	</section>
+	
+	<section id="individuals">
+		<h2>Individuals</h2>
+		
+		<p>The currently expression language are listed in the following table. All are instances of <a href="http://islab.ntua.gr/ns/dr2ml-el#ExpressionLanguage"><code>drel:ExpressionLanguage</code></a>.</p>
+		
+		<table class="def" id="tab-rdbms-types" rules="all">
+			<caption>Character Encodings</caption>
+			<thead>
+				<tr>
+					<th><strong>IRI</strong></th>
+					<th><strong>Description</strong></th>
+				</tr>
+			</thead>				
+			<tbody>
+				<tr>
+					<td><div id="drel:JSONKey"><a href="http://islab.ntua.gr/ns/d2rml-el#JSONElement"><code>drel:JSONKey</code></a></div></td>
+					<td>A JSON key (name)</td>
+				</tr>
+				<tr>
+					<td><div id="drel:JSONPath"><a href="http://islab.ntua.gr/ns/d2rml-el#JSONPath"><code>drel:JSONPath</code></a></div></td>
+					<td>A JSONPath expression</td>
+				</tr>
+				<tr>
+					<td><div id="drel:RegEx"><a href="http://islab.ntua.gr/ns/d2rml-el#RegEx"><code>drel:RegEx</code></a></div></td>
+					<td>A regular expression in default syntax</td>
+				</tr>				
+				<tr>
+					<td><div id="drel:RegExJava"><a href="http://islab.ntua.gr/ns/d2rml-el#RegExJava"><code>drel:RegExJava</code></a></div></td>
+					<td>A regular expression in Java syntax containing at least one capturing group</td>
+				</tr>
+				<tr>
+					<td><div id="drel:RegExPerl"><a href="http://islab.ntua.gr/ns/d2rml-el#RegExPerl"><code>drel:RegExPerl</code></a></div></td>
+					<td>A regular expression in Perl syntax containing at least one capturing group</td>
+				</tr>
+				<tr>
+					<td><div id="drel:RegExPython"><a href="http://islab.ntua.gr/ns/d2rml-el#RegExPython"><code>drel:RegExPython</code></a></div></td>
+					<td>A regular expression in Python syntax containing at least one capturing group</td>
+				</tr>
+				<tr>
+					<td><div id="drel:XMLElement"><a href="http://islab.ntua.gr/ns/d2rml-el#XMLElement"><code>drel:XMLElement</code></a></div></td>
+					<td>An XML element name</td>
+				</tr>
+				<tr>
+					<td><div id="drel:XPath"><a href="http://islab.ntua.gr/ns/d2rml-el#XPath"><code>drel:XPath</code></a></div></td>
+					<td>An XPath expression in default version</td>
+				</tr>
+				<tr>
+					<td><div id="drel:XPath10"><a href="http://islab.ntua.gr/ns/d2rml-el#XPath10"><code>drel:XPath10</code></a></div></td>
+					<td>An XPath 1.0 expression</td>
+				</tr>
+				<tr>
+					<td><div id="drel:XPath20"><a href="http://islab.ntua.gr/ns/d2rml-el#XPath20"><code>drel:XPath20</code></a></div></td>
+					<td>An XPath 2.0 expression</td>
+				</tr>
+				<tr>
+					<td><div id="drel:XPath30"><a href="http://islab.ntua.gr/ns/d2rml-el#XPath30"><code>drel:XPath30</code></a></div></td>
+					<td>An XPath 3.0 expression</td>
+				</tr>
+				<tr>
+					<td><div id="drel:XPath31"><a href="http://islab.ntua.gr/ns/d2rml-el#XPath31"><code>drel:XPath31</code></a></div></td>
+					<td>An XPath 3.1 expression</td>
+				</tr>
+				
+			</tbody>
+		</table>
+		
+	</section>
+
+</body>
+
+</html>
