@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset='utf-8'>
+	<title>The File Formats Vocabulary</title>
+    <script src='../../respec-w3c.js' class='remove' defer></script>
+    <style id="respec-mainstyle"></style>
+    <script class='remove'>
+        // All config options at https://respec.org/docs/
+        var respecConfig = {
+            // Working Groups ids at https://respec.org/w3c/groups/
+            specStatus: "unofficial",
+            editors: [{
+                name: "Alexandros Chortaras",
+                url: "https://www.ece.ntua.gr/en/staff/217",
+            }],
+            shortName: "d2rml",
+            // See https://respec.org/docs/#xref for usage.
+            xref: "web-platform",
+			latestVersion: "http://islab.ntua.gr/ns/file-formats",
+        };
+    </script>
+
+</head>
+
+<body>
+    <h1 id="title">The File Formats Vocabulary</h1>
+    <section id='abstract'>
+		<p>This document defines the File Formats vocabulary.</p>
+    </section>
+
+    <section id='namespace'>
+		<h2>Namespace</h2>
+		<p>The namespace <code>ffs</code> is <code>http://islab.ntua.gr/ns/file-formats#</code>.</p>
+    </section>
+
+	<section id="classes">
+		<h2>Classes</h2>
+		
+		<section id="Archive">
+			<h3>ffs:Archive</h3>
+
+			<p>An archive file format.</p>
+			
+			<dl>
+				<dt>URI:</dt>
+				<dd><code>http://islab.ntua.gr/ns/file-formats#Archive</code></dd>
+				<dt>Subclass of:</dt>
+				<dd><code>http://islab.ntua.gr/ns/file-formats#FileFormat</code></dd>
+			</dl>
+			
+		</section>		
+		
+		<section id="Audio">
+			<h3>ffs:Audio</h3>
+
+			<p>An audio file format.</p>
+			
+			<dl>
+				<dt>URI:</dt>
+				<dd><code>http://islab.ntua.gr/ns/file-formats#Audio</code></dd>
+				<dt>Subclass of:</dt>
+				<dd><code>http://islab.ntua.gr/ns/file-formats#FileFormat</code></dd>
+			</dl>
+			
+		</section>	
+
+		
+		<section id="Database">
+			<h3>ffs:Database</h3>
+
+			<p>An database file format.</p>
+			
+			<dl>
+				<dt>URI:</dt>
+				<dd><code>http://islab.ntua.gr/ns/file-formats#Database</code></dd>
+				<dt>Subclass of:</dt>
+				<dd><code>http://islab.ntua.gr/ns/file-formats#FileFormat</code></dd>
+			</dl>
+			
+		</section>	
+
+		<section id="Document">
+			<h3>ffs:Document</h3>
+
+			<p>An document file format.</p>
+			
+			<dl>
+				<dt>URI:</dt>
+				<dd><code>http://islab.ntua.gr/ns/file-formats#Document</code></dd>
+				<dt>Subclass of:</dt>
+				<dd><code>http://islab.ntua.gr/ns/file-formats#FileFormat</code></dd>
+			</dl>
+			
+		</section>	
+		
+		<section id="FileFormat">
+			<h3>ffs:FileFormat</h3>
+
+			<p>A file format.</p>
+			
+			<dl>
+				<dt>URI:</dt>
+				<dd><code>http://islab.ntua.gr/ns/file-formats#FileFormat</code></dd>
+			</dl>
+			
+		</section>		
+		
+		<section id="Image">
+			<h3>ffs:Image</h3>
+
+			<p>An image file format.</p>
+			
+			<dl>
+				<dt>URI:</dt>
+				<dd><code>http://islab.ntua.gr/ns/file-formats#Image</code></dd>
+				<dt>Subclass of:</dt>
+				<dd><code>http://islab.ntua.gr/ns/file-formats#FileFormat</code></dd>
+			</dl>
+			
+		</section>	
+		
+		<section id="Spreadsheet">
+			<h3>ffs:Spreadsheet</h3>
+
+			<p>An spreadsheet file format.</p>
+			
+			<dl>
+				<dt>URI:</dt>
+				<dd><code>http://islab.ntua.gr/ns/file-formats#Spreadsheet</code></dd>
+				<dt>Subclass of:</dt>
+				<dd><code>http://islab.ntua.gr/ns/file-formats#FileFormat</code></dd>
+			</dl>
+			
+		</section>			
+		
+		<section id="Video">
+			<h3>ffs:Video</h3>
+
+			<p>An video file format.</p>
+			
+			<dl>
+				<dt>URI:</dt>
+				<dd><code>http://islab.ntua.gr/ns/file-formats#Video</code></dd>
+				<dt>Subclass of:</dt>
+				<dd><code>http://islab.ntua.gr/ns/file-formats#FileFormat</code></dd>
+			</dl>
+			
+		</section>	
+		
+	</section>
+	
+	<section id="individuals">
+		<h2>Individuals</h2>
+		
+		<p>The currently defined file formats are listed in the following table. All are instances of <a href="http://islab.ntua.gr/ns/file-formats#FileFormat"><code>ffs:FileFormat</code></a>.</p>
+		
+		<table class="def" id="tab-file-formats" rules="all">
+			<caption>File Formats</caption>
+			<thead>
+				<tr>
+					<th><strong>IRI</strong></th>
+					<th><strong>Type</strong></th>
+					<th><strong>Description</strong></th>
+				</tr>
+			</thead>				
+			<tbody>
+				<tr>
+					<td><div id="7Z"><a href="http://islab.ntua.gr/ns/file-formats#7Z"><code>ffs:7Z</code></a></div></td>
+					<td><a href="http://islab.ntua.gr/ns/file-formats#Archive"><code>ffs:Archive</code></a></td>
+					<td>A .7z file</td>
+				</tr>
+				<tr>
+					<td><div id="CSV"><a href="http://islab.ntua.gr/ns/file-formats#CSV"><code>ffs:CSV</code></a></div></td>
+					<td><a href="http://islab.ntua.gr/ns/file-formats#Spreadsheet"><code>ffs:Spreadsheet</code></a></td>
+					<td>A .csv file</td>
+				</tr>				
+				<tr>
+					<td><div id="JSON"><a href="http://islab.ntua.gr/ns/file-formats#JSON"><code>ffs:JSON</code></a></div></td>
+					<td></td>
+					<td>A .json file</td>
+				</tr>					
+				<tr>
+					<td><div id="GZ"><a href="http://islab.ntua.gr/ns/file-formats#GZ"><code>ffs:GZ</code></a></div></td>
+					<td><a href="http://islab.ntua.gr/ns/file-formats#Archive"><code>ffs:Archive</code></a></td>
+					<td>A .gz file</td>
+				</tr>
+				<tr>
+					<td><div id="RAR"><a href="http://islab.ntua.gr/ns/file-formats#RAR"><code>ffs:RAR</code></a></div></td>
+					<td><a href="http://islab.ntua.gr/ns/file-formats#Archive"><code>ffs:Archive</code></a></td>
+					<td>A .rar file</td>
+				</tr>
+				<tr>
+					<td><div id="TAR"><a href="http://islab.ntua.gr/ns/file-formats#TAR"><code>ffs:TAR</code></a></div></td>
+					<td><a href="http://islab.ntua.gr/ns/file-formats#Archive"><code>ffs:Archive</code></a></td>
+					<td>A .tar file</td>
+				</tr>					
+				<tr>
+					<td><div id="TAR_GZ"><a href="http://islab.ntua.gr/ns/file-formats#TAR_GZ"><code>ffs:TAR_GZ</code></a></div></td>
+					<td><a href="http://islab.ntua.gr/ns/file-formats#Archive"><code>ffs:Archive</code></a></td>
+					<td>A .tar.gz file</td>
+				</tr>				
+				<tr>
+					<td><div id="XLS"><a href="http://islab.ntua.gr/ns/file-formats#XLS"><code>ffs:XLS</code></a></div></td>
+					<td><a href="http://islab.ntua.gr/ns/file-formats#Spreadsheet"><code>ffs:Spreadsheet</code></a></td>
+					<td>A .xls file</td>
+				</tr>	
+				<tr>
+					<td><div id="XLS"><a href="http://islab.ntua.gr/ns/file-formats#XLSX"><code>ffs:XLSX</code></a></div></td>
+					<td><a href="http://islab.ntua.gr/ns/file-formats#Spreadsheet"><code>ffs:Spreadsheet</code></a></td>
+					<td>A .xlsx file</td>
+				</tr>	
+				<tr>
+					<td><div id="XML"><a href="http://islab.ntua.gr/ns/file-formats#XML"><code>ffs:XML</code></a></div></td>
+					<td></td>
+					<td>A .xml file</td>
+				</tr>				
+				<tr>
+					<td><div id="ZIP"><a href="http://islab.ntua.gr/ns/file-formats#ZIP"><code>ffs:ZIP</code></a></div></td>
+					<td><a href="http://islab.ntua.gr/ns/file-formats#Archive"><code>ffs:Archive</code></a></td>
+					<td>A .zip file</td>
+				</tr>
+				
+			</tbody>
+		</table>
+		
+	</section>
+
+</body>
+
+</html>

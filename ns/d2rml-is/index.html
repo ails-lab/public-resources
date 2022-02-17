@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset='utf-8'>
+	<title>The D2RML Information Sources Vocabulary</title>
+    <script src='../../respec-w3c.js' class='remove' defer></script>
+    <style id="respec-mainstyle">
+	</style>
+    <script class='remove'>
+        // All config options at https://respec.org/docs/
+        var respecConfig = {
+            specStatus: "unofficial",
+            editors: [{
+                name: "Alexandros Chortaras",
+                url: "https://www.ece.ntua.gr/en/staff/217",
+            }],
+            shortName: "d2rml",
+            // See https://respec.org/docs/#xref for usage.
+            xref: "web-platform",
+			latestVersion: "http://islab.ntua.gr/ns/d2rml-is",
+        };
+    </script>
+	<style>
+	
+	</style>
+</head>
+
+<body>
+    <h1 id="title">The D2RML Information Sources (D2RML&#8209;IS) Vocabulary</h1>
+    <section id='abstract'>
+		<p>This document defines the <a href="https://apps.islab.ntua.gr/d2rml/tr/d2rml-is">D2RML Information Sources (D2RML&#8209;IS)</a> vocabulary.</p>
+    </section>
+
+    <section id='namespace'>
+	<h2>Namespace</h2>
+		<p>The namespace <code>dris</code> is <code>http://islab.ntua.gr/ns/d2rml-is#</code>.</p>
+    </section>
+	
+<!--	<section id='sotd'>
+			<p><i>This document is under elaboration, it is subject to change and may provide an incomplete presentation of certain aspects of D2RML.</i></p>
+    </section> -->
+
+
+	<section id="sec-classes">
+		<h2>Classes</h2>
+		<p>This section defines the classes of this vocabulary.</p>
+
+		<section id="Credentials">
+			<h3>dris:Credentials</h3>
+
+			<p>The credentials to access an information source.</p>
+			
+			<dl>
+				<dt>URI:</dt>
+				<dd><code>http://islab.ntua.gr/ns/d2rml-is#Credentials</code></dd>
+			</dl>
+			
+		</section>
+		
+		<section id="DataSource">
+			<h3>dris:DataSource</h3>
+
+			<p>A data information source.</p>
+			
+			<dl>
+				<dt>URI:</dt>
+				<dd><code>http://islab.ntua.gr/ns/d2rml-is#DataSource</code></dd>
+				<dt>Subclass of:</dt>
+				<dd><a href="http://islab.ntua.gr/ns/d2rml-is#InformationSource"><code>dris:InformationSource</code></a></dd>
+				<dt>Usage note:</dt>
+				<dd>It should be used only through one of its concrete subclasses.</dd>
+			</dl>
+			
+		</section>
+
+		<section id="EnumerateRequestIterator">
+			<h3>dris:EnumerateRequestIterator</h3>
+
+			<p>A request iterator that takes successively all values from a fixed list of values.</p>
+			
+			<dl>
+				<dt>URI:</dt>
+				<dd><code>http://islab.ntua.gr/ns/d2rml-is#EnumerateRequestIterator</code></dd>
+				<dt>Subclass of:</dt>
+				<dd><a href="http://islab.ntua.gr/ns/d2rml-is#RequestIterator"><code>dris:RequestIterator</code></a></dd>
+			</dl>				
+		</section>
+		
+		<section id="FileSource">
+			<h3>dris:FileSource</h3>
+			<p>A data source consisting of the contents of file in the local file system or of a file contained within another data source.</p>
+			
+			<dl>
+				<dt>URI:</dt>
+				<dd><code>http://islab.ntua.gr/ns/d2rml-is#FileSource</code></dd>
+				<dt>Subclass of:</dt>
+				<dd><a href="http://islab.ntua.gr/ns/d2rml-is#DateSource"><code>dris:DataSource</code></a></dd>
+			</dl>
+		</section>
+		
+		<section id="HTTPSource">
+			<h3>dris:HTTPSource</h3>
+			
+			<p>A data source consisting of data blocks obtained through HTTP requests.</p>
+			
+			<dl>
+				<dt>URI:</dt>
+				<dd><code>http://islab.ntua.gr/ns/d2rml-is#HTTPSource</code></dd>
+				<dt>Subclass of:</dt>
+				<dd><a href="http://islab.ntua.gr/ns/d2rml-is#DateSource"><code>dris:DataSource</code></a></dd>
+			</dl>
+
+		</section>
+		
+		<section id="InformationSource">
+			<h3>dris:InformationSource</h3>
+			<p>A data container that can provide data.</p>
+			
+			<dl>
+				<dt>URI:</dt>
+				<dd><code>http://islab.ntua.gr/ns/d2rml-is#InformationSource</code></dd>
+				<dt>Usage note:</dt>
+				<dd>It should be used only through one of its concrete subclasses.</dd>
+			</dl>
+		</section>
+		
+		<section id="RDBMSSource">
+			<h3>dris:RDBMSSource</h3>
+			<p>A relational database management system information source.</p>
+			
+			<dl>
+				<dt>URI:</dt>
+				<dd><code>http://islab.ntua.gr/ns/d2rml-is#RDBMSSource</code></dd>
+				<dt>Subclass of:</dt>
+				<dd><a href="http://islab.ntua.gr/ns/d2rml-is#ServiceSource"><code>dris:ServiceSource</code></a></dd>
+			</dl>	
+		</section>
+		
+		<section id="RDBMS">
+			<h3>dris:RDBMS</h3>
+			<p>A relational database management system.</p>
+			
+			<dl>
+				<dt>URI:</dt>
+				<dd><code>http://islab.ntua.gr/ns/d2rml-is#RDBMS</code></dd>
+			</dl>	
+		</section>		
+
+		<section id="RequestIterator">
+			<h3>dris:RequestIterator</h3>
+
+			<p>A parameter for sending successive requests to an information source to obtain consecutive data blocks.</p>
+			
+			<dl>
+				<dt>URI:</dt>
+				<dd><code>http://islab.ntua.gr/ns/d2rml-is#RequestIterator</code></dd>
+				<dt>Usage note:</dt>
+				<dd>It should be used only though one of its concrete subclasses.</dd>
+			</dl>		
+		</section>		
+		
+		<section id="ServiceSource">
+			<h3>dris:ServiceSource</h3>
+			<p>An information sources that provides data blocks as answers to data selection queries.</p>
+			
+			<dl>
+				<dt>URI:</dt>
+				<dd><code>http://islab.ntua.gr/ns/d2rml-is#ServiceSource</code></dd>
+				<dt>Subclass of:</dt>
+				<dd><a href="http://islab.ntua.gr/ns/d2rml-is#InformationSource"><code>dris:InformationSource</code></a></dd>
+			</dl>		
+		</section>
+
+		
+		<section id="SimpleCountRequestIterator">
+			<h3>dris:SimpleCountRequestIterator</h3>
+
+			<p>A parameter that takes successively values from an initial value up to a maximum value by a specific increment.</p>
+			
+			<dl>
+				<dt>URI:</dt>
+				<dd><code>http://islab.ntua.gr/ns/d2rml-is#SimpleCountRequestIterator</code></dd>
+				<dt>Subclass of:</dt>
+				<dd><a href="http://islab.ntua.gr/ns/d2rml-is#RequestIterator"><code>dris:RequestIterator</code></a></dd>
+			</dl>		
+			
+		</section>
+
+		<section id="SimpleKeyRequestIterator">
+			<h3>dris:SimpleKeyRequestIterator</h3>
+
+			<p>A parameter that takes successively values obtained from an element of the current data block returned by an information source.</p>
+			
+			<dl>
+				<dt>URI:</dt>
+				<dd><code>http://islab.ntua.gr/ns/d2rml-is#SimpleKeyRequestIterator</code></dd>
+				<dt>Subclass of:</dt>
+				<dd><a href="http://islab.ntua.gr/ns/d2rml-is#RequestIterator"><code>dris:RequestIterator</code></a></dd>
+			</dl>	
+		</section>
+		
+		<section id="SPARQLEndpoint">
+			<h3>dris:SPARQLEndpoint</h3>
+			<p>A SPARQL service information source.</p>
+		
+			<dl>
+				<dt>URI:</dt>
+				<dd><code>http://islab.ntua.gr/ns/d2rml-is#SPARQLEndpoint</code></dd>
+				<dt>Subclass of:</dt>
+				<dd><a href="http://islab.ntua.gr/ns/d2rml-is#ServiceSource"><code>dris:ServiceSource</code></a></dd>
+			</dl>		
+		</section>
+		
+		<section id="StandardUserCredentials">
+			<h3>dris:StandardUserCredentials</h3>
+			
+			<p>Credentials specified by a username and password.</p>
+			
+			<dl>
+				<dt>URI:</dt>
+				<dd><code>http://islab.ntua.gr/ns/d2rml-is#StandardUserCredentials</code></dd>
+				<dt>Subclass of:</dt>
+				<dd><a href="http://islab.ntua.gr/ns/d2rml-is#Credentials"><code>dris:Credentials</code></a></dd>
+			</dl>						
+		</section>	
+		
+		<section id="StringSource">
+			<h3>dris:StringSource</h3>
+			
+			<p>An information source providing a fixed string as data block.</p>
+			
+			<dl>
+				<dt>URI:</dt>
+				<dd><code>http://islab.ntua.gr/ns/d2rml-is#StringSource</code></dd>
+				<dt>Subclass of:</dt>
+				<dd><a href="http://islab.ntua.gr/ns/d2rml-is#InformationSource"><code>dris:InformationSource</code></a></dd>
+			</dl>						
+		</section>		
+
+	</section>
+	
+	<section id="properties">
+		<h2>Properties</h2>
+
+		<p>This section defines the properties of this vocabulary.</p>
+
+		<section id="accessCredentials">
+			<h3>dris:accessCredentials</h3>
+			<p>Credentials needed to access an information source.</p>
+			<dl>
+				<dt>Domain:</dt>
+				<dd><a href="http://islab.ntua.gr/ns/d2rml-is#HTTPSource"><code>dris:HTTPSource</code></a>, <a href="http://islab.ntua.gr/ns/d2rml-is#RDBMS"><code>dris:RDBMS</code></a></dd>
+				<dt>Range:</dt>
+				<dd><a href="http://islab.ntua.gr/ns/d2rml-is#Authentication"><code>dris:Credentials</code></a></dd>
+			</dl>
+		</section>	
+		
+		<section id="characterEncoding">
+			<h3>dris:characterEncoding</h3>
+			<p>The character encoding of the data obtained from a generic source, if they are textual data.</p>
+			
+			<dl>
+				<dt>Domain:</dt>
+				<dd><a href="http://islab.ntua.gr/ns/d2rml-is#DataSource"><code>dris:DataSource</code></a></dd>
+				<dt>Range includes:</dt>
+				<dd>IRI in the <a href="http://islab.ntua.gr/ns/cenc#"><code>http://islab.ntua.gr/ns/cenc#</code></a> namespace.</dd>
+			</dl>
+		</section>
+		
+		<section id="containerSource">
+			<h3>dris:containerSource</h3>
+			<p>The generic source from which a secondary information source is derived. This applies to file sources extracted from compressed files (e.g. from .zip files) or for RDF model sources obtained from textual data. In the first case, the source generic source is the source providing the compressed file, and in the second the source providing the textual data.</p>
+			<dl>
+				<dt>Domain:</dt>
+				<dd><a href="http://islab.ntua.gr/ns/d2rml-is#FileSource"><code>dris:FileSource</code></a></dd>
+				<dt>Range:</dt>
+				<dd><a href="http://islab.ntua.gr/ns/d2rml-is#DataSource"><code>dris:DataSource</code></a></dd>
+			</dl>
+		</section>
+		
+		<section id="fileCredentials">
+			<h3>dris:fileCredentials</h3>
+			<p>Credentials needed to access the contents of a file.</p>
+			<dl>
+				<dt>Domain:</dt>
+				<dd><a href="http://islab.ntua.gr/ns/d2rml-is#DataSource"><code>dris:DataSource</code></a></dd>
+				<dt>Range:</dt>
+				<dd><a href="http://islab.ntua.gr/ns/d2rml-is#Authentication"><code>dris:Credentials</code></a></dd>
+			</dl>
+		</section>	
+
+
+		<section id="databaseInstaneName">
+			<h3>dris:databaseInstanceName</h3>
+			<p>The database instance name of an RDBMS.</p>
+			<dl>
+				<dt>Domain:</dt>
+				<dd><a href="http://islab.ntua.gr/ns/d2rml-is#RDBMS"><code>dris:RDBMS</code></a></dd>
+				<dt>Range:</dt>
+				<dd><a href="https://www.w3.org/TR/xmlschema11-2/#string"><code>xsd:string</code></a></dd>
+			</dl>
+		</section>
+		
+		<section id="databaseName">
+			<h3>dris:databaseName</h3>
+			<p>The database name of an RDBMS.</p>
+			<dl>
+				<dt>Domain:</dt>
+				<dd><a href="http://islab.ntua.gr/ns/d2rml-is#RDBMS"><code>dris:RDBMS</code></a></dd>
+				<dt>Range:</dt>
+				<dd><a href="https://www.w3.org/TR/xmlschema11-2/#string"><code>xsd:string</code></a></dd>
+			</dl>
+		</section>
+
+		<section id="fileFormat">
+			<h3>dris:fileFormat</h3>
+			<p>The format of the data obtained from a generic source, if they are a file.</p>
+			<dl>
+				<dt>Domain:</dt>
+				<dd><a href="http://islab.ntua.gr/ns/d2rml-is#DataSource"><code>dris:DataSource</code></a></dd>
+				<dt>Range includes:</dt>
+				<dd>IRI in the <a href="https://www.w3.org/ns/formats/"><code>https://www.w3.org/ns/formats/</code></a> namespace, IRI in the <a href="http://islab.ntua.gr/ns/file-formats#"><code>http://islab.ntua.gr/ns/file-formats#</code></a> namespace.</dd>
+			</dl>
+		</section>
+		
+		<section id="host">
+			<h3>dris:host</h3>
+			<p>A host name.</p>
+			<dl>
+				<dt>Range:</dt>
+				<dd><a href="https://www.w3.org/TR/xmlschema11-2/#string"><code>xsd:string</code></a></dd>
+			</dl>
+		</section>	
+		
+		<section id="httpRequest">
+			<h3>dris:httpRequest</h3>
+			<p>The full request to specify an HTTP source.</p>
+			<dl>
+				<dt>Domain:</dt>
+				<dd><a href="http://islab.ntua.gr/ns/d2rml-is#HTTPSource"><code>dris:HTTPSource</code></a></dd>
+				<dt>Range:</dt>
+				<dd><a href="https://www.w3.org/TR/HTTP-in-RDF10/#RequestClass"><code>http:Request</code></a></dd>
+			</dl>
+		</section>	
+		
+		<section id="inContainerPath">
+			<h3>dris:inContainerPath</h3>
+			
+			<p>A shortcut property for a single file within a container source</p>
+
+			<dl>
+				<dt>Domain:</dt>
+				<dd><a href="http://islab.ntua.gr/ns/d2rml-is#DataSource"><code>dris:DataSource</code></a></dd>
+				<dt>Range:</dt>
+				<dd><a href="https://www.w3.org/TR/xmlschema11-2/#string"><code>xsd:string</code></a>, IRI in the <code>file</code> scheme</dd>
+			</dl>
+			
+		</section>
+		
+		<section id="password">
+			<h3>dris:password</h3>
+			<p>A password needed to access a source through an authentication process.</p>
+			<dl>
+				<dt>Domain:</dt>
+				<dd><a href="http://islab.ntua.gr/ns/d2rml-is#StandardUserCredentials"><code>dris:StandardUserCredentials</code></a></dd>
+				<dt>Range:</dt>
+				<dd><a href="https://www.w3.org/TR/xmlschema11-2/#string"><code>xsd:string</code></a></dd>
+			</dl>
+		</section>
+
+		<section id="path">
+			<h3>dris:path</h3>
+			<p>The path to a file in a file system or within a file container (e.g. in zipped files.) Paths should be absolute. The preferred separator for any file system is /.</p>
+			<dl>
+				<dt>Domain:</dt>
+				<dd><a href="http://islab.ntua.gr/ns/d2rml-is#FileSource"><code>dris:FileSource</code></a></dd>
+				<dt>Range:</dt>
+				<dd><a href="https://www.w3.org/TR/xmlschema11-2/#string"><code>xsd:string</code></a>, IRI in the <code>file</code> scheme.</dd>
+			</dl>
+		</section>
+		
+		<section id="paths">
+			<h3>dris:paths</h3>
+			<p>To be used instead of multiple <a href="http://islab.ntua.gr/ns/d2rml-is#path"><code>dris:path</code></a> properties when order is important.</p>
+			<dl>
+				<dt>Domain:</dt>
+				<dd><a href="http://islab.ntua.gr/ns/d2rml-is#FileSource"><code>dris:FileSource</code></a></dd>
+				<dt>Range:</dt>
+				<dd>A <a href="https://www.w3.org/TR/rdf-schema/#ch_list"><code>rdf:List</code></a> of <a href="https://www.w3.org/TR/xmlschema11-2/#string"><code>xsd:string</code></a>s or IRIs in the <code>file</code> scheme.</dd>
+			</dl>
+		</section>		
+		
+		<section id="port">
+			<h3>dris:port</h3>
+			<p>A port number for a host.</p>
+			<dl>
+				<dt>Range:</dt>
+				<dd><a href="https://www.w3.org/TR/xmlschema11-2/#integer"><code>xsd:integer</code></a></dd>
+			</dl>
+		</section>	
+		
+		<section id="preHttpRequest">
+			<h3>dris:preHttpRequest</h3>
+			<p>A shortcut property for a single HTTP request that needs to be sends to obtain content from an HTTP source before the actual content retrieving HTTP request (e.g. to login).</p>
+			<dl>
+				<dt>Domain:</dt>
+				<dd><a href="http://islab.ntua.gr/ns/d2rml-is#HTTPSource"><code>dris:HTTPSource</code></a></dd>
+				<dt>Range:</dt>
+				<dd><a href="https://www.w3.org/TR/HTTP-in-RDF10/#RequestClass"><code>http:Request</code></a></dd>
+			</dl>
+		</section>	
+		
+		<section id="preHttpRequests">
+			<h3>dris:preHttpRequests</h3>
+			<p>A series of HTTP requests that need to be send to obtain content from an HTTP source before the actual content retrieving HTTP request.</p>
+			<dl>
+				<dt>Domain:</dt>
+				<dd><a href="http://islab.ntua.gr/ns/d2rml-is#HTTPSource"><code>dris:HTTPSource</code></a></dd>
+				<dt>Range:</dt>
+				<dd>A <a href="https://www.w3.org/TR/rdf-schema/#ch_list"><code>rdf:List</code></a> or <a href="https://www.w3.org/TR/HTTP-in-RDF10/#RequestClass"><code>http:Request</code></a>s</dd>
+			</dl>
+		</section>			
+<!--		
+		<section id="preprocessFunction">
+			<h3>dris:preprocessFunction</h3>
+			<p>Specifies a function that will be applied on the raw data of a DataSource.</p>
+			<dl>
+				<dt>Domain:</dt>
+				<dd><a href="http://islab.ntua.gr/ns/d2rml-is#DataSource"><code>dris:DataSource</code></a></dd>
+				<dt>Range:</dt>
+				<dd><a href="http://islab.ntua.gr/ns/d2rml-fn#FunctionApplication"><code>drfn:FunctionApplication</code></a></dd>
+			</dl>
+		</section>
+		
+		<section id="preprocessFunctions">
+			<h3>dris:preprocessFunctions</h3>
+			<p>To be used instead of multiple <a href="http://islab.ntua.gr/ns/d2rml-is#preprocessFunction"><code>dris:preprocessingFunction</code></a> properties when order is important</p>
+			<dl>
+				<dt>Domain:</dt>
+				<dd><a href="http://islab.ntua.gr/ns/d2rml-is#DataSource"><code>dris:DataSource</code></a></dd>
+				<dt>Range:</dt>
+				<dd>A <a href="https://www.w3.org/TR/rdf-schema/#ch_list"><code>rdf:List</code></a> of <a href="http://islab.ntua.gr/ns/d2rml-fn#FunctionApplication"><code>drfn:FunctionApplication</code></a>s</dd>
+			</dl>
+		</section>
+-->		
+		<section id="rdbmsType">
+			<h3>dris:rdbmsType</h3>
+			<p>The type of an RDBMS information source.</p>
+			<dl>
+				<dt>Domain:</dt>
+				<dd><a href="http://islab.ntua.gr/ns/d2rml-is#RDBMSSource"><code>dris:RDBMSSource</code></a></dd>
+				<dt>Range includes:</dt>
+				<dd><a href="http://islab.ntua.gr/ns/d2rml-is#RDBMS"><code>dris:RDBMS</code></a></dd>
+			</dl>
+		</section>	
+
+		<section id="string">
+			<h3>dris:string</h3>
+			<p>The content of a string source.</p>
+			<dl>
+				<dt>Domain:</dt>
+				<dd><a href="http://islab.ntua.gr/ns/d2rml-is#StringSource"><code>dris:StringSource</code></a></dd>
+				<dt>Range:</dt>
+				<dd><a href="https://www.w3.org/TR/xmlschema11-2/#string"><code>xsd:string</code></a></dd>
+			</dl>
+		</section>				
+		
+		<section id="username">
+			<h3>dris:username</h3>
+			<p>A username needed to access a source through an authentication process.</p>
+			<dl>
+				<dt>Domain:</dt>
+				<dd><a href="http://islab.ntua.gr/ns/d2rml-is#StandardUserCredentials"><code>dris:StandardUserCredentials</code></a></dd>
+				<dt>Range:</dt>
+				<dd><a href="https://www.w3.org/TR/xmlschema11-2/#string"><code>xsd:string</code></a></dd>
+			</dl>
+		</section>
+		
+		<section id="uri">
+			<h3>dris:uri</h3>
+			<p>The uri for a HTTP source specified by a simple GET request or for a SPARQL Endpoint.</p>
+			<dl>
+				<dt>Domain:</dt>
+				<dd><a href="http://islab.ntua.gr/ns/d2rml-is#HTTPSource"><code>dris:HTTPSource</code></a>, <a href="http://islab.ntua.gr/ns/d2rml-is#SPARQLEndpoint"><code>dris:SPARQLEndpoint</code></a></dd>
+				<dt>Range:</dt>
+				<dd><a href="https://www.w3.org/TR/xmlschema11-2/#string"><code>xsd:string</code></a></dd>
+			</dl>
+		</section>		
+		
+	</section>
+
+	<section id="individuals">
+		<h2>Individuals</h2>
+
+		<section id="rdbms-types">
+			<h3>RDBMS's</h3>
+			
+			<p>The currently defined RDBMS's by D2RML-IS are listed in the following table. All are instances of <a href="http://islab.ntua.gr/ns/dr2ml-is#RDBMS"><code>dris:RDBMS</code></a>.</p></p>
+			
+<!--			<p>The support of RDBMS's depends on the <a href="#dfn-d2rml-processor">D2RML processor</a>, and a D2RML processor implementation may provide support for additional RDBMS's.</p> -->
+
+			<table class="def" id="tab-rdbms-types" rules="all">
+				<caption>RDBMS types.</caption>
+				<thead>
+					<tr>
+						<th><strong>IRI</strong></th>
+						<th><strong>Description</strong></th>
+					</tr>
+				</thead>				
+				<tbody>
+					<tr>
+						<td><div id="MicrosoftAccess"><a href="http://islab.ntua.gr/ns/d2rml-is#MicrosoftAccess"><code>dris:MicrosoftAccess</code></a></div></td>
+						<td>A Microsoft Access database</td>
+					</tr>
+					<tr>
+						<td><div id="MicrosoftSQLServer"><a href="http://islab.ntua.gr/ns/d2rml-is#MicrosoftSQLServer"><code>dris:MicrosoftSQLServer</code></a></div></td>
+						<td>A Microsoft SQL Server database</td>
+					</tr>
+					<tr>
+						<td><div id="MySQL"><a href="http://islab.ntua.gr/ns/d2rml-is#MySQL"><code>dris:MySQL</code></a></div></td>
+						<td>A MySQL database</td>
+					</tr>
+					<tr>
+						<td><div id="Oracle"><a href="http://islab.ntua.gr/ns/d2rml-is#Oracle"><code>dris:Oracle</code></a></div></td>
+						<td>An Oracle database</td>
+					</tr>					<tr>
+						<td><div id="PostgreSQL"><a href="http://islab.ntua.gr/ns/d2rml-is#PostgreSQL"><code>dris:PostgreSQL</code></a></div></td>
+						<td>A PostgreSQL database</td>
+					</tr>
+				</tbody>
+			</table>
+		</section>
+		
+	</section>
+</section>
+
+
+</body>
+
+</html>
