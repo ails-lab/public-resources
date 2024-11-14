@@ -1,0 +1,32 @@
+{
+ "@context": {
+    "as":      "https://www.w3.org/ns/activitystreams#",
+    "prov":     "http://www.w3.org/ns/prov#",
+    "soa":     "http://sw.islab.ntua.gr/annotation/",
+
+	"Literal":      "soa:Literal",
+	"Rating":      "soa:Rating",
+	"RDFPathSelector":      "soa:RDFPathSelector",
+    "RDFPropertySelector":      "soa:RDFPropertySelector",
+    "Validation":      "soa:Validation",
+    "confidence":    {"@id": "soa:confidence", "@type": "xsd:decimal"},
+    "destination": {"@type": "@id", "@id": "soa:destination"},
+    "property":    {"@id": "soa:property", "@type": "@id" },
+	"rdfPath":      "soa:rdfPath",
+	"recommendation": {"@type": "@vocab", "@id": "soa:recommendation"},
+    "score":    {"@id": "soa:score", "@type": "xsd:decimal"},
+    "review":    {"@type": "@id", "@id": "soa:hasReview"},
+    "accept":      "soa:Accept",
+	"reject":      "soa:Reject",
+	"asserting":    "soa:asserting",
+	"GraphBody":    "soa:GraphBody",
+	"statements":    {"@id": "soa:statements", "@container": "@graph"},
+	
+	"wasDerivedFrom": "prov:wasDerivedFrom",
+	
+	"generator":     {"@type": "@id", "@id": "as:generator"},
+	"Software":             "as:Application"
+	
+  }
+  
+}
