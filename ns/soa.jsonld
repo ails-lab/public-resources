@@ -1,32 +1,32 @@
 {
  "@context": {
-    "as":      "https://www.w3.org/ns/activitystreams#",
-    "prov":     "http://www.w3.org/ns/prov#",
-    "soa":     "http://sw.islab.ntua.gr/annotation/",
+    "as": "https://www.w3.org/ns/activitystreams#",
+    "prov": "http://www.w3.org/ns/prov#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "soa": "http://sw.islab.ntua.gr/annotation/",
 
-	"Literal":      "soa:Literal",
-	"Rating":      "soa:Rating",
-	"RDFPathSelector":      "soa:RDFPathSelector",
-    "RDFPropertySelector":      "soa:RDFPropertySelector",
-    "Validation":      "soa:Validation",
-    "confidence":    {"@id": "soa:confidence", "@type": "xsd:decimal"},
+    "GraphBody": "soa:GraphBody",
+    "Rating": "soa:Rating",
+    "Validation": "soa:Validation",
+    "confidence": {"@id": "soa:confidence", "@type": "xsd:decimal"},
+    "recommendation": {"@type": "@vocab", "@id": "soa:recommendation"},
+    "review": {"@type": "@id", "@id": "soa:hasReview"},
+    "statements": {"@id": "soa:statements", "@container": "@graph"},
+    "asserting": "soa:asserting",
+    "accept": "soa:Accept",
+    "reject": "soa:Reject",
+	 
+    "Literal": "soa:Literal",
+    "RDFPathSelector": "soa:RDFPathSelector",
+    "RDFPropertySelector": "soa:RDFPropertySelector",
     "destination": {"@type": "@id", "@id": "soa:destination"},
-    "property":    {"@id": "soa:property", "@type": "@id" },
-	"rdfPath":      "soa:rdfPath",
-	"recommendation": {"@type": "@vocab", "@id": "soa:recommendation"},
-    "score":    {"@id": "soa:score", "@type": "xsd:decimal"},
-    "review":    {"@type": "@id", "@id": "soa:hasReview"},
-    "accept":      "soa:Accept",
-	"reject":      "soa:Reject",
-	"asserting":    "soa:asserting",
-	"GraphBody":    "soa:GraphBody",
-	"statements":    {"@id": "soa:statements", "@container": "@graph"},
+    "property": {"@id": "soa:property", "@type": "@id" },
+    "rdfPath": "soa:rdfPath",
+    "score": {"@id": "soa:score", "@type": "xsd:decimal"},
 	
-	"wasDerivedFrom": "prov:wasDerivedFrom",
+    "wasDerivedFrom": "prov:wasDerivedFrom",
 	
-	"generator":     {"@type": "@id", "@id": "as:generator"},
-	"Software":             "as:Application"
-	
+    "generator": {"@type": "@id", "@id": "as:generator"},
+    "Software": "as:Application"
   }
-  
 }
